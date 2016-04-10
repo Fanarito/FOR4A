@@ -4,8 +4,8 @@
 using namespace std;
 int main() {
   srand(time(NULL));
-  char colors [6] = { 'B', 'G', 'R', 'Y', 'O', 'P'};
-  char chosen_colors [4];
+  char colors[6] = {'B', 'G', 'R', 'Y', 'O', 'P'};
+  char chosen_colors[4];
   for (int i = 0; 4 > i; i++) {
     int x = rand() % 6;
     cout << x;
@@ -15,10 +15,13 @@ int main() {
   int tries = 0;
   bool won = false;
   while (tries < 12 && !won) {
-    cout << "| B = Blue | G = Green | R = Red | Y = Yellow | O = Orange | P = Pink |" << endl;
+    cout << "| B = Blue | G = Green | R = Red | Y = Yellow | O = Orange | P = "
+            "Pink |"
+         << endl;
     cout << "Pick your colors: ";
-    char choice [4];
+    char choice[4];
     cin >> choice;
+    tries++;
     int correct = 0;
     int wrong_place = 0;
     for (int i = 0; 4 > i; i++) {

@@ -1,28 +1,28 @@
-struct Node
-{
-  char data[45];
-  Node *left;
-  Node *right;
+struct Node {
+  int data;
+  Node *prev;
+  Node *next;
 };
 
-class NodeList
-{
- private:
+class NodeList {
+private:
   Node *nodelist;
   Node *first;
   Node *last;
   Node *current;
 
- public:
+public:
   NodeList();
   NodeList(Node n);
   void add(Node n);
   void removeLast();
-  Node NodeList::find(char d[45]);
+  Node find(int number);
   Node getNext();
   Node getPrevious();
-  bool NodeList::isRoot(Node n);
-  bool NodeList::isLast(Node n);
+  bool isRoot(Node n);
+  bool isLast(Node n);
   void insert(Node n, Node *left);
-  char* getCurrentData();
+  int *getCurrentData();
+  void setCurrentData(int number);
+  int **getAll();
 };
